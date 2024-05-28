@@ -18,6 +18,7 @@ const { importGist: importGistFun } = require('./commands/import_gist');
 const { three_tiers } = require('./commands/three_tiers');
 const { mvnfeature } = require('./commands/mvc_feature');
 const { modularNewFeature } = require('./commands/modular_new_feature');
+const { flutterGetItNewModule } = require('./commands/flutter_get_it_generate_module');
 const { modularInitialConfig } = require('./commands/modular_initial_config');
 const path = require('path');
 
@@ -66,7 +67,9 @@ function saveSnippet(context, snippetName, snippetFile) {
 function activate(context) {
 	snippetHit(context);
 	const modularfeature = vscode.commands.registerCommand("extension.modularfeature", modularNewFeature);
-	const modularInitial = vscode.commands.registerCommand("extension.modulariniital", modularInitialConfig);
+	const flutterGetItModule = vscode.commands.registerCommand("extension.flutterGetItModule", flutterGetItNewModule);
+
+	const modularInitial = vscode.commands.registerCommand("extension.modularinitial", modularInitialConfig);
 	const getxfeature = vscode.commands.registerCommand("extension.getxfeature", getXNewFeature);
 
 	const disposable = vscode.commands.registerCommand("extension.clean-architecture-folders", createCleanArchFolders);
@@ -122,9 +125,10 @@ function activate(context) {
 		MVCFlutterFolders,
 		getxfeature,
 		modularfeature,
+		flutterGetItModule,
 		modularInitial,
 		fvmConfigureCommand,
-		fvmInstallConfigureCommand
+		fvmInstallConfigureCommand,
 	);
 }
 

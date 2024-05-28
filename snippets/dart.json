@@ -134,6 +134,7 @@
 		],
 		"description": "Create class"
 	},
+	
 	"dart_enum": {
 		"prefix": "fu-enum",
 		"body": [

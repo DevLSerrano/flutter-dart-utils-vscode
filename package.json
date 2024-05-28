@@ -37,7 +37,8 @@
 		"onCommand:extension.clean-architecture-folders",
 		"onCommand:extension.extension.getxfeature",
 		"onCommand:extension.extension.modularfeature",
-		"onCommand:extension.extension.extension.modulariniital",
+		"onCommand:extension.flutterGetItModule",
+		"onCommand:extension.extension.extension.modularinitial",
 		"workspaceContains:**/pubspec.yaml"
 	],
 	"main": "./src/extension.js",
@@ -158,6 +159,11 @@
 				"command": "extension.modulariniital",
 				"title": "Flutter Modular: Configure Framework"
 			},
+
+			{
+				"command": "extension.flutterGetItModule",
+				"title": "Flutter GetIt: New Module"
+			},
 			{
 				"command": "extension.fvmInstallConfigure",
 				"title": "FVM: Install and Configure Version"
@@ -232,6 +238,11 @@
 				{
 					"when": "explorerResourceIsFolder",
 					"command": "extension.modulariniital",
+					"group": "1_modification@7"
+				},
+				{
+					"when": "explorerResourceIsFolder",
+					"command": "extension.flutterGetItModule",
 					"group": "1_modification@7"
 				},
 				{
@@ -324,6 +335,10 @@
 			{
 				"language": "dart",
 				"path": "./snippets/json_serializable.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/flutter_get_it.json"
 			}
 		]
 	},

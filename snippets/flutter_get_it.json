@@ -1,0 +1,67 @@
+{
+    "flutter_get_it_module": {
+		"prefix": "fu-fgetit-module",
+		"body": [
+            "import 'package:flutter/material.dart';",
+			"import 'package:flutter_getit/flutter_getit.dart';",
+            "",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends FlutterGetItModule {",
+			"   @override",
+            "   String get moduleRouteName => '${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}';",
+            "",
+            "   @override",
+            "   List<Bind<Object>> get bindings => [];",
+            "",
+            "   @override",
+            "   Map<String, WidgetBuilder> get pages => {};",
+			"}"
+		],
+		"description": "Create FlutterGetIt Module"
+	},
+    "flutter_get_it_page_builder": {
+		"prefix": "fu-fgetit-page-builder",
+		"body": [
+            "import 'package:flutter/material.dart';",
+			"import 'package:flutter_getit/flutter_getit.dart';",
+            "",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
+            "   const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({super.key});",
+            "",
+            "   @override",
+            "   Widget build(BuildContext context) {",
+            "       return FlutterGetItPageBuilder(",
+            "           path: '${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}',",
+            "           page: (context) => Scaffold(",
+            "           appBar: AppBar(",
+            "            title: const Text('${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}'),",
+            "       ),",
+            "      ),",
+            "    );",
+            "   }",
+			"}"
+		],
+		"description": "Create FlutterGetIt PageBuilder"
+	},
+    "flutter_get_it_widget": {
+		"prefix": "fu-fgetit-widget",
+		"body": [
+            "import 'package:flutter/material.dart';",
+			"import 'package:flutter_getit/flutter_getit.dart';",
+            "",
+			"class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends FlutterGetItWidget {",
+            "  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}() : super(const ValueKey('${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}'));",
+            "",
+            "  @override",
+            "  List<Bind<Object>> get bindings => [];",
+            "",
+            "  @override",
+            "  WidgetBuilder get widget => (context) => Scaffold(",
+            "        appBar: AppBar(",
+            "          title: const Text('ModuleTest'),",
+            "        ),",
+            "      );",
+			"}"
+		],
+		"description": "Create FlutterGetIt PageBuilder"
+	}
+}
